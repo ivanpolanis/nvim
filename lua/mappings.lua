@@ -34,17 +34,15 @@ map("v", ">", ">gv", opts)
 -- paste over currently selected text without yanking it
 map("v", "p", "\"_dP", opts)
 
+-- go to definitions
 
--- snip
-map("i", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
-map("s", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
-map("i", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
-map("s", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
+map('n', '<LEADER>gd', '<cmd>lua require"telescope.builtin".lsp_definitions()<CR>', opts)
+map('n', '<LEADER>gv', '<cmd>lua require"telescope.builtin".lsp_definitions({jump_type="vsplit"})<CR>', opts)
 
 -- buffers
 
-map("n", "<C-S-n>", ":enew<CR>", opts)
-map("n", "<C-S-q>", ":bw<CR>", opts)
+map("n", "<leader>nn", ":enew<CR>", opts)
+map("n", "<leader>x", ":bw #<CR>", opts)
 
 -- Tab switch buffer
 map("n", "<S-l>", "<Cmd>bnext<CR>", opts)
@@ -65,8 +63,8 @@ map("n", "<A-j>", ":resize +1<CR>", opts)
 map("i", "<c-f>", "<c-g>u<Esc>[s1z=`]a<c-g>u", opts)
 
 -- Move selected line / block of text in visual mode
-map("x", "K", ":move '<-2<CR>gv-gv", opts)
 map("x", "J", ":move '>+1<CR>gv-gv", opts)
+map("x", "K", ":move '<-2<CR>gv-gv", opts)
 
 -- Remove conflicting keybinds
 vim.cmd([[map <C-f> <Nop>]])
