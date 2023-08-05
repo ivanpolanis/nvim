@@ -42,7 +42,7 @@ map('n', '<LEADER>gv', '<cmd>lua require"telescope.builtin".lsp_definitions({jum
 -- buffers
 
 map("n", "<leader>nn", ":enew<CR>", opts)
-map("n", "<leader>x", ":bw #<CR>", opts)
+map("n", "<leader>x", "<Cmd>BufDel<CR>", opts)
 
 -- Tab switch buffer
 map("n", "<S-l>", "<Cmd>bnext<CR>", opts)

@@ -284,6 +284,10 @@ local plugins = {
       vim.g.rustfmt_autosave = 1
     end
   },
+  {
+        "ojroques/nvim-bufdel",
+        config = get_config("nvim-bufdel")
+    }
 }
 
 local opts = {
