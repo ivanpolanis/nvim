@@ -82,6 +82,7 @@ cmp.setup({
             { name = 'luasnip' },
             { name = 'orgmode' },
             { name = 'path' },
+            { name = 'crates'}
         },
         {
             { name = 'buffer' },

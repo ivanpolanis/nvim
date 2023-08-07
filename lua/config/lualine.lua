@@ -9,9 +9,9 @@ require 'lualine'.setup {
         always_divide_middle = true,
     },
     sections = {
-        lualine_a = { 'mode' },
+        lualine_a = { 'mode', right_padding = 10, },
         lualine_b = { 'branch', 'diff',
-            { 'diagnostics', sources = { 'nvim_diagnostic', 'coc' } } },
+            { 'diagnostics', sources = { 'nvim_diagnostic', 'coc' } }, padding = 100, },
         lualine_c = { 'filename' },
         lualine_x = { 'encoding', 'fileformat', 'filetype' },
         lualine_y = { 'progress' },
