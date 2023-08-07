@@ -109,11 +109,11 @@ local plugins = {
         priority = 1000,
         enabled = true,
     },
-	{
-		'feline-nvim/feline.nvim',
-		config = get_config('feline'),
+    {
+        'feline-nvim/feline.nvim',
+        config = get_config('feline'),
         enabled = true,
-	},
+    },
     {
         'catppuccin/nvim',
         name = 'catppuccin',
@@ -184,8 +184,8 @@ local plugins = {
         url = 'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
         config = get_config('lsp-lines'),
     },
-    { 'mfussenegger/nvim-dap', config = get_config('dap') },
-    { 'mfussenegger/nvim-jdtls', enabled = false },
+    { 'mfussenegger/nvim-dap',           config = get_config('dap') },
+    { 'mfussenegger/nvim-jdtls',         enabled = true,                config = get_config('java') },
     { 'jose-elias-alvarez/null-ls.nvim', config = get_config('null-ls') },
     {
         'rmagatti/auto-session',
@@ -252,7 +252,7 @@ local plugins = {
         config = get_config("unception")
     },
     {
-    "SmiteshP/nvim-navbuddy",
+        "SmiteshP/nvim-navbuddy",
         dependencies = {
             "neovim/nvim-lspconfig",
             "SmiteshP/nvim-navic",
@@ -267,35 +267,35 @@ local plugins = {
     --     config = get_config('copilot')
     -- },
     {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require "config.lsp"
-    end,
-  },
-  {
-    "simrat39/rust-tools.nvim",
-    ft = "rust",
-    dependencies = "neovim/nvim-lspconfig",
-  },
-  {
-    "rust-lang/rust.vim",
-    ft = "rust",
-    init = function ()
-      vim.g.rustfmt_autosave = 1
-    end
-  },
-  {
-    'saecki/crates.nvim',
-    tag = 'v0.3.0',
-    requires = { 'nvim-lua/plenary.nvim' },
-    config = function()
-        require('crates').setup()
-    end,
-  },
-  {
+        "neovim/nvim-lspconfig",
+        config = function()
+            require "config.lsp"
+        end,
+    },
+    {
+        "simrat39/rust-tools.nvim",
+        ft = "rust",
+        dependencies = "neovim/nvim-lspconfig",
+    },
+    {
+        "rust-lang/rust.vim",
+        ft = "rust",
+        init = function()
+            vim.g.rustfmt_autosave = 1
+        end
+    },
+    {
+        'saecki/crates.nvim',
+        tag = 'v0.3.0',
+        requires = { 'nvim-lua/plenary.nvim' },
+        config = function()
+            require('crates').setup()
+        end,
+    },
+    {
         "ojroques/nvim-bufdel",
         config = get_config("nvim-bufdel")
-    }
+    },
 }
 
 local opts = {
