@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 local expr_options = { noremap = true, expr = true, silent = true }
 
 -- set leader key
-map('n', '<Space>', '<Nop>' , opts)
+map('n', '<Space>', '<Nop>', opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -159,3 +159,4 @@ map('n', '<leader>ln', '<Cmd>Navbuddy<CR>', opts)
 
 map('n', '<leader>rc', ':!cargo check<CR>', opts)
 map('n', '<leader>rr', ':!cargo run<CR>', opts)
+map('n', '<leader>rt', ':!cargo test<CR>', opts)
