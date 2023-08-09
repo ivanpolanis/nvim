@@ -25,6 +25,5 @@ require("mason-lspconfig").setup {
         "tsserver",
         "pyright",
         "volar",
-        "java",
     }
 }
