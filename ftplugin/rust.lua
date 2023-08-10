@@ -4,12 +4,12 @@ if not status_ok then
 end
 
 local opts = {
-  mode = "n", -- NORMAL mode
+  mode = "n",     -- NORMAL mode
   prefix = "<leader>",
-  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-  silent = true, -- use `silent` when creating keymaps
+  buffer = nil,   -- Global mappings. Specify a buffer number for buffer local mappings
+  silent = true,  -- use `silent` when creating keymaps
   noremap = true, -- use `noremap` when creating keymaps
-  nowait = true, -- use `nowait` when creating keymaps
+  nowait = true,  -- use `nowait` when creating keymaps
 }
 
 local mappings = {
@@ -17,8 +17,9 @@ local mappings = {
     name = "Rust",
     h = { "<cmd>RustToggleInlayHints<Cr>", "Toggle Hints" },
     r = { "<cmd>RustRunnables<Cr>", "Runnables" },
-    C = { "<cmd>lua _CARGO_RUN()<cr>", "Cargo Run" },
-    t = { "<cmd>lua _CARGO_TEST()<cr>", "Cargo Test" },
+    C = { "<cmd>RustRun<cr>", "Run" },
+    t = { "<cmd>RustTest<cr>", "Run test under the cursor" },
+    T = { "<cmd>RustTest!<cr>", "Run all tests" },
     m = { "<cmd>RustExpandMacro<Cr>", "Expand Macro" },
     c = { "<cmd>RustOpenCargo<Cr>", "Open Cargo" },
     p = { "<cmd>RustParentModule<Cr>", "Parent Module" },
