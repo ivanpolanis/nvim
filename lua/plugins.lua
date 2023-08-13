@@ -304,6 +304,10 @@ local plugins = {
                 -- Configuration here, or leave empty to use defaults
             })
         end
+    },
+    {
+        "EtiamNullam/deferred-clipboard.nvim",
+        config = get_config("deferred-clipboard"),
     }
 }
 
