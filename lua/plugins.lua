@@ -308,6 +308,10 @@ local plugins = {
     {
         "EtiamNullam/deferred-clipboard.nvim",
         config = get_config("deferred-clipboard"),
+    },
+    {
+        "christoomey/vim-tmux-navigator",
+        lazy = false,
     }
 }
 

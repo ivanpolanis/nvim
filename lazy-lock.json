@@ -67,6 +67,7 @@
   "toggleterm.nvim": { "branch": "main", "commit": "1c5996ee3c30b54751093fe68d40676859e7778f" },
   "tokyonight.nvim": { "branch": "main", "commit": "1b0c88094548a62641ece1e668fa9a234e1c539e" },
   "vim-snippets": { "branch": "master", "commit": "c7e61b73a546c9dd0525cd158cc1613bb48e414a" },
+  "vim-tmux-navigator": { "branch": "master", "commit": "cdd66d6a37d991bba7997d593586fc51a5b37aa8" },
   "vimtex": { "branch": "master", "commit": "e8542f26b45e489fe7cfa7894737ccb0fe937fcd" },
   "which-key.nvim": { "branch": "main", "commit": "4b73390eec680b4c061ea175eb32c0ff3412271d" }
 }
