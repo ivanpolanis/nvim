@@ -72,4 +72,4 @@ opt.lazyredraw = true -- do not redraw screen while running macros
 -- Clipboard
 vim.api.nvim_set_option("clipboard", "unnamedplus")
 
-vim.cmd [[colorscheme kanagawa-wave]]
+vim.cmd [[colorscheme tokyonight-night]]
