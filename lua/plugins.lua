@@ -17,8 +17,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+    { 'gbprod/nord.nvim' },
     { 'nvim-lua/plenary.nvim', },
     { 'nvim-lua/popup.nvim' },
+    {
+        "elentok/format-on-save.nvim",
+        config = get_config('format_on_save')
+    },
     {
         'kylechui/nvim-surround',
         config = get_config('nvim-surround')
