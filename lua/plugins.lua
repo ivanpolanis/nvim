@@ -18,6 +18,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     { 'gbprod/nord.nvim' },
+    { 'ellisonleao/gruvbox.nvim' },
     { 'nvim-lua/plenary.nvim', },
     { 'nvim-lua/popup.nvim' },
     {

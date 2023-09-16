@@ -4,4 +4,4 @@ require('autocmd')  -- lua/autocmd.lua
 require('mappings') -- lua/mappings.lua
 require('options')  -- lua/options.lua
 
-vim.cmd [[colorscheme nord]]
+vim.cmd [[colorscheme catppuccin-mocha]]

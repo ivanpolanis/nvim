@@ -16,6 +16,7 @@
   "format-on-save.nvim": { "branch": "main", "commit": "c9fbdfcd913ee706de020463b88893a0df8aec4a" },
   "friendly-snippets": { "branch": "main", "commit": "781af8c404ce351e999b5102b9724ee847f3ad18" },
   "gitsigns.nvim": { "branch": "main", "commit": "372d5cb485f2062ac74abc5b33054abac21d8b58" },
+  "gruvbox.nvim": { "branch": "main", "commit": "7fb36e0f67aa6f3d7f3e54f37ca7032ea1af0b59" },
   "guess-indent.nvim": { "branch": "main", "commit": "b8ae749fce17aa4c267eec80a6984130b94f80b2" },
   "jot.nvim": { "branch": "main", "commit": "47668369d41c510ef5c53b27b7d2f30f6d0bba97" },
   "kanagawa": { "branch": "master", "commit": "7fe819624a47d94f0a2c9970f69b00db8516b3b8" },
