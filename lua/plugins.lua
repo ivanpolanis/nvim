@@ -17,6 +17,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+    { 'github/copilot.vim' },
+    {
+        'lervag/vimtex',
+        config = get_config('vimtex')
+    },
     { 'gbprod/nord.nvim' },
     { 'ellisonleao/gruvbox.nvim' },
     { 'nvim-lua/plenary.nvim', },
