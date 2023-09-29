@@ -61,7 +61,7 @@ local math_template = s("mtemp", fmt([[
 \end{document}
 ]], {
     i(1, "TITLE"),
-    i(2, "Hisbaan Noorani"),
+    i(2, "Iván Polanis"),
     i(3, "DATE"),
     i(0)
 }, { delimiters = "<>" }
@@ -82,7 +82,7 @@ local normal_template = s("temp", fmt([[
 \end{document}
 ]], {
     i(1, "TITLE"),
-    i(2, "Hisbaan Noorani"),
+    i(2, "Iván Polanis"),
     i(3, "DATE"),
     i(0)
 }, { delimiters = "<>" })
@@ -383,5 +383,25 @@ local left_arrow = s("la", {
     t "\\leftarrow"
 })
 table.insert(snippets, left_arrow)
+
+local p_matrix = s("pmatrix", fmt([[
+\begin{{pmatrix}}
+    {}
+\end{{pmatrix}}
+]], {
+    i(0)
+})
+)
+
+table.insert(snippets, p_matrix)
+
+local v_matrix = s("vmatrix", fmt([[
+\begin{{vmatrix}}
+    {}
+\end{{vmatrix}}
+]], {
+    i(0)
+})
+)
 
 return snippets, autosnippets
