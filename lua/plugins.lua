@@ -271,12 +271,6 @@ local plugins = {
         },
         config = get_config("nvim-navbuddy")
     },
-    -- {
-    --     "zbirenbaum/copilot.lua",
-    --     cmd = "Copilot",
-    --     event = "InsertEnter",
-    --     config = get_config('copilot')
-    -- },
     {
         "neovim/nvim-lspconfig",
         config = function()
@@ -312,7 +306,6 @@ local plugins = {
         tag = "*", -- Use for stability; omit to use `main` branch for the latest features
         config = function()
             require("nvim-surround").setup({
-                -- Configuration here, or leave empty to use defaults
             })
         end
     },
