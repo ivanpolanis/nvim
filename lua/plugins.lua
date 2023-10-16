@@ -17,7 +17,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-    { 'github/copilot.vim' },
+    -- { 'github/copilot.vim' },
     {
         'lervag/vimtex',
         config = get_config('vimtex')
