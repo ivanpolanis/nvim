@@ -1,6 +1,7 @@
 require("nvim-treesitter.configs").setup {
-    ensure_installed = { "c", "java", "python", "lua", "bash", "javascript", "vim", "vimdoc", "latex", "rust" }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-    ignore_install = {},                                                                                         -- List of parsers to ignore installing
+    ensure_installed = { "c", "java", "python", "lua", "bash", "javascript", "toml", "tsx", "vim", "vimdoc", "latex",
+        "rust" },        -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+    ignore_install = {}, -- List of parsers to ignore installing
     sync_install = false,
     auto_install = true,
     highlight = {
@@ -23,6 +24,9 @@ require("nvim-treesitter.configs").setup {
     },
     indent = { enable = true },
     autopairs = { { enable = true } },
+    autotag = {
+        enable = true,
+    },
     textobjects = {
         select = {
             enable = true,

@@ -404,4 +404,15 @@ local v_matrix = s("vmatrix", fmt([[
 })
 )
 
+local tcbox = s("tcbox", fmt([[
+\begin{{tcolorbox}}
+    {}
+\end{{tcoloxbox}}
+]], {
+    i(0)
+})
+)
+
+table.insert(snippets, tcbox)
+
 return snippets, autosnippets
