@@ -407,7 +407,7 @@ local v_matrix = s("vmatrix", fmt([[
 local tcbox = s("tcbox", fmt([[
 \begin{{tcolorbox}}
     {}
-\end{{tcoloxbox}}
+\end{{tcolorbox}}
 ]], {
     i(0)
 })
