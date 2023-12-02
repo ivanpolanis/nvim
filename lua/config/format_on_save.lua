@@ -8,9 +8,9 @@ format_on_save.setup({
   },
   formatter_by_ft = {
     sh = formatters.shfmt,
+    lua = formatters.lsp,
+    c = formatters.lsp,
     },
 
-  -- By default, all shell commands are prefixed with "sh -c" (see PR #3)
-  -- To prevent that set `run_with_sh` to `false`.
   run_with_sh = true,
 })
