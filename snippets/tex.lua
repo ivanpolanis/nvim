@@ -415,4 +415,50 @@ local tcbox = s("tcbox", fmt([[
 
 table.insert(snippets, tcbox)
 
+local section = s("section", fmt([[
+\section{<>}
+]], {
+    i(0)
+}, { delimiters = "<>" })
+)
+
+table.insert(snippets, section)
+
+local ssection = s("ssection", fmt([[
+\subsection{<>}
+]], {
+    i(0)
+}, { delimiters = "<>" })
+)
+
+table.insert(snippets, ssection)
+
+local mbf = s("mbf", fmt([[
+\mathbf{<>}
+]], {
+    i(0)
+}, { delimiters = "<>" })
+)
+
+table.insert(snippets, mbf)
+
+local inm = s("inm", fmt([[
+$<>$
+]], {
+    i(0)
+}, { delimiters = "<>" })
+)
+
+table.insert(snippets, inm)
+
+local cdot = s("cdot", fmt([[
+\cdot <>
+]], {
+    i(0)
+}, { delimiters = "<>" })
+)
+
+table.insert(snippets, cdot)
+
+
 return snippets, autosnippets
