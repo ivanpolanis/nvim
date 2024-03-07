@@ -316,6 +316,10 @@ local plugins = {
     {
         "christoomey/vim-tmux-navigator",
         lazy = false,
+    },
+    -- Pascal
+    {
+        "mattia72/vim-delphi"
     }
 }
 

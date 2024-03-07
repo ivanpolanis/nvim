@@ -39,23 +39,23 @@ local conds = require("luasnip.extras.expand_conditions")
 require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets/" })
 
 ls.config.set_config({
-    history = false,
-    update_events = "TextChanged,TextChangedI",
-    delete_check_events = "TextChanged",
-    ext_opts = {
-        [types.choiceNode] = {
-            active = {
-                virt_text = { { "choiceNode", "Comment" } },
-            }
-        }
-    },
-    ext_base_prio = 300,
-    ext_prio_increase = 1,
-    enable_autosnippets = true,
-    store_selection_keys = "<Tab>",
-    ft_func = function()
-        return vim.split(vim.bo.filetype, ".", true)
-    end,
+	history = false,
+	update_events = "TextChanged,TextChangedI",
+	delete_check_events = "TextChanged",
+	ext_opts = {
+		[types.choiceNode] = {
+			active = {
+				virt_text = { { "choiceNode", "Comment" } },
+			}
+		}
+	},
+	ext_base_prio = 300,
+	ext_prio_increase = 1,
+	enable_autosnippets = true,
+	store_selection_keys = "<Tab>",
+	ft_func = function()
+		return vim.split(vim.bo.filetype, ".", true)
+	end,
 })
 
 --------------
@@ -188,13 +188,13 @@ ls.add_snippets("java", {
 })
 
 function leave_snippet()
-    if
-        ((vim.v.event.old_mode == 's' and vim.v.event.new_mode == 'n') or vim.v.event.old_mode == 'i')
-        and require('luasnip').session.current_nodes[vim.api.nvim_get_current_buf()]
-        and not require('luasnip').session.jump_active
-    then
-        require('luasnip').unlink_current()
-    end
+	if
+			((vim.v.event.old_mode == 's' and vim.v.event.new_mode == 'n') or vim.v.event.old_mode == 'i')
+			and require('luasnip').session.current_nodes[vim.api.nvim_get_current_buf()]
+			and not require('luasnip').session.jump_active
+	then
+		require('luasnip').unlink_current()
+	end
 end
 
 -- stop snippets when you leave to normal mode
@@ -212,3 +212,4 @@ vim.api.nvim_command([[
 --[[ }) ]]
 
 require("luasnip.loaders.from_vscode").lazy_load()
+require("luasnip.loaders.from_snipmate").lazy_load({ paths = "~/.config/nvim/snippets/" })
