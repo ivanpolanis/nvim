@@ -79,58 +79,58 @@ lspconfig.volar.setup({
     handlers = handlers,
 })
 
---lspconfig.ltex.setup({
---    on_attach = function(client, bufnr)
---        on_attach(client, bufnr)
---        require("ltex_extra").setup {
---            load_langs = { "en-CA", "en-US", "es-ES" },
---            init_check = true,
---            path = os.getenv("HOME") .. "/.config/nvim/dictionaries",
---            log_level = "none",
---        }
---    end,
---    capabilities = capabilities,
---    handlers = handlers,
---    settings = {
---        ltex = {
---            disabled = { "markdown", "org", "gitcommit" },
---            enabled = { "latex", "tex", "bib" },
---            language = "en-CA",
---            dictionary = { ["en-CA"] = { "Hisbaan", "Noorani" } },
---            disabledRules = {
---                ["en-CA"] = {
---                    "PROFANITY",
---                    "EN_QUOTES",
---                    "PASSIVE_VOICE",
---                    "WHITESPACE_RULE",
---                    "TOO_LONG_SENTENCE",
---                },
---            },
---            additionalRules = {
---                enablePickyRules = true,
---                motherTongue = "en-CA",
---            },
---            latex = {
---                environments = {
---                    verbatim = { "ignore" },
---                    Verbatim = { "ignore" },
---                    minted = { "ignore" },
---                    texttt = { "ignore" },
---                    forest = { "ignore" },
---                },
---            },
---            markdown = {
---                nodes = {
---                    CodeBlock = { "ignore" },
---                    FencedCodeBlock = { "ignore" },
---                    AutoLink = { "dummy" },
---                    Code = { "dummy" },
---                },
---            },
---        },
---    },
---})
---
+lspconfig.ltex.setup({
+    on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+        require("ltex_extra").setup {
+            load_langs = { "en-CA", "en-US", "es-ES" },
+            init_check = true,
+            path = os.getenv("HOME") .. "/.config/nvim/dictionaries",
+            log_level = "none",
+        }
+    end,
+    capabilities = capabilities,
+    handlers = handlers,
+    settings = {
+        ltex = {
+            disabled = { "markdown", "org", "gitcommit" },
+            enabled = { "latex", "tex", "bib" },
+            language = "es-ES",
+            dictionary = { ["es-ES"] = { "Ivan", "Polais" } },
+            disabledRules = {
+                ["es-ES"] = {
+                    -- "PROFANITY",
+                    -- "EN_QUOTES",
+                    -- "PASSIVE_VOICE",
+                    -- "WHITESPACE_RULE",
+                    "TOO_LONG_SENTENCE",
+                },
+            },
+            additionalRules = {
+                enablePickyRules = true,
+                motherTongue = "es-ES",
+            },
+            latex = {
+                environments = {
+                    verbatim = { "ignore" },
+                    Verbatim = { "ignore" },
+                    minted = { "ignore" },
+                    texttt = { "ignore" },
+                    forest = { "ignore" },
+                },
+            },
+            markdown = {
+                nodes = {
+                    CodeBlock = { "ignore" },
+                    FencedCodeBlock = { "ignore" },
+                    AutoLink = { "dummy" },
+                    Code = { "dummy" },
+                },
+            },
+        },
+    },
+})
+
 lspconfig.bashls.setup({
     on_attach = on_attach,
     capabilities = capabilities,

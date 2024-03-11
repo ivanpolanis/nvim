@@ -82,7 +82,16 @@ cmp.setup({
             { name = 'luasnip' },
             { name = 'orgmode' },
             { name = 'path' },
-            { name = 'crates'}
+            { name = 'crates' },
+            -- {
+            --     name = 'spell',
+            --     option = {
+            --         keep_all_entries = false,
+            --         enable_in_context = function()
+            --             return true
+            --         end,
+            --     },
+            --          }
         },
         {
             { name = 'buffer' },
@@ -108,3 +117,6 @@ cmp.setup.cmdline(':', {
         { name = 'cmdline' }
     })
 })
+
+-- vim.opt.spell = true
+-- vim.opt.spelllang = { 'es_ES' }

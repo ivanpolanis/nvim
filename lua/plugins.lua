@@ -187,6 +187,9 @@ local plugins = {
         config = get_config('cmp')
     },
     {
+        "f3fora/cmp-spell",
+    },
+    {
         'williamboman/mason.nvim',
         dependencies = { 'williamboman/mason-lspconfig.nvim' },
         config = get_config('mason')
