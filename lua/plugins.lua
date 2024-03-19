@@ -320,6 +320,12 @@ local plugins = {
         "christoomey/vim-tmux-navigator",
         lazy = false,
     },
+    {
+        "michaelrommel/nvim-silicon",
+        cmd = "Silicon",
+        lazy = true,
+        config = get_config("silicon"),
+    },
     -- Pascal
     {
         "mattia72/vim-delphi"
