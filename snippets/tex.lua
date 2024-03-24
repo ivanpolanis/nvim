@@ -82,7 +82,7 @@ local normal_template = s("temp", fmt([[
 \end{document}
 ]], {
     i(1, "TITLE"),
-    i(2, "Iván Polanis"),
+    i(2, "Polanis, Iván Valentín"),
     i(3, "DATE"),
     i(0)
 }, { delimiters = "<>" })
@@ -118,8 +118,8 @@ local apa_template = s("apa", fmt([[
 \end{document}
 ]], {
     i(1, "TITLE"),
-    i(2, "Hisbaan Noorani"),
-    i(3, "University of Toronto"),
+    i(2, "Polanis, Iván Valentín"),
+    i(3, "Universidad Nacional de La Plata"),
     i(4, "COURSE"),
     i(5, "PROFESSOR"),
     i(6, "DATE"),
