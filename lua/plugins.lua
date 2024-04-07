@@ -17,7 +17,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-    -- { 'github/copilot.vim' },
     {
         'lervag/vimtex',
         config = get_config('vimtex')
@@ -112,7 +111,7 @@ local plugins = {
         'nvim-lualine/lualine.nvim',
         dependencies = { 'kyazdani42/nvim-web-devicons', lazy = true },
         config = get_config('lualine'),
-        enabled = false,
+        enabled = true,
     },
     {
         'folke/tokyonight.nvim',
@@ -234,11 +233,6 @@ local plugins = {
         config = get_config('which-key')
     },
     {
-        'hisbaan/jot.nvim',
-        dependencies = 'nvim-lua/plenary.nvim',
-        config = get_config('jot'),
-    },
-    {
         'smjonas/live-command.nvim',
         config = get_config('live-command')
     },
@@ -335,7 +329,7 @@ local plugins = {
 local opts = {
     plugins = {
         install = {
-            colorscheme = { "kanagawa-wave" }
+            colorscheme = { "catppuccin-mocha" }
         }
     },
     ui = {

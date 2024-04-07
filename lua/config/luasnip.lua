@@ -202,14 +202,5 @@ vim.api.nvim_command([[
     autocmd ModeChanged * lua leave_snippet()
 ]])
 
---[[ autocmd("InsertLeave", { ]]
---[[   callback = function() ]]
---[[     if require("luasnip").session.current_nodes[vim.api.nvim_get_current_buf()] ]]
---[[       and not require("luasnip").session.jump_active then ]]
---[[       require("luasnip").unlink_current() ]]
---[[     end ]]
---[[   end, ]]
---[[ }) ]]
-
 require("luasnip.loaders.from_vscode").lazy_load()
 require("luasnip.loaders.from_snipmate").lazy_load({ paths = "~/.config/nvim/snippets/" })
