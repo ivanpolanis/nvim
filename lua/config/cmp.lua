@@ -83,15 +83,6 @@ cmp.setup({
             { name = 'orgmode' },
             { name = 'path' },
             { name = 'crates' },
-            -- {
-            --     name = 'spell',
-            --     option = {
-            --         keep_all_entries = false,
-            --         enable_in_context = function()
-            --             return true
-            --         end,
-            --     },
-            --          }
         },
         {
             { name = 'buffer' },

@@ -61,23 +61,8 @@ lspconfig.lua_ls.setup({
     },
 })
 
-lspconfig.jdtls.setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-    handlers = handlers,
-})
 
-lspconfig.intelephense.setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-    handlers = handlers,
-})
 
-lspconfig.volar.setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-    handlers = handlers,
-})
 
 lspconfig.ltex.setup({
     on_attach = function(client, bufnr)
@@ -139,33 +124,7 @@ lspconfig.clangd.setup({
     handlers = handlers,
 })
 
-lspconfig.cssls.setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-    handlers = handlers,
-})
-
-lspconfig.emmet_ls.setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-    handlers = handlers,
-    filetypes = { 'html', 'typescriptreact', 'javascriptreact', 'css', 'sass', 'scss', 'less', 'php' },
-    init_options = {
-        html = {
-            options = {
-                ["output.selfClosingStyle"] = "xhtml"
-            },
-        },
-    }
-})
-
 lspconfig.hls.setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-    handlers = handlers,
-})
-
-lspconfig.html.setup({
     on_attach = on_attach,
     capabilities = capabilities,
     handlers = handlers,

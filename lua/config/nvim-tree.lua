@@ -58,12 +58,6 @@ require("nvim-tree").setup {
         relativenumber = false,
         side = "left",
         signcolumn = "yes",
-        mappings = {
-            custom_only = false,
-            list = {
-                -- custom user mappings go here
-            },
-        },
     },
     renderer = {
         add_trailing = true,

@@ -13,12 +13,6 @@ map("n", "<Down>", "<Nop>", opts)
 map("n", "<Left>", "<Nop>", opts)
 map("n", "<Right>", "<Nop>", opts)
 
--- better window navigation
-map("n", "<C-h>", "<Cmd> TmuxNavigateLeft<CR>", opts)
-map("n", "<C-j>", "<Cmd> TmuxNavigateDown<CR>", opts)
-map("n", "<C-k>", "<Cmd> TmuxNavigateUp<CR>", opts)
-map("n", "<C-l>", "<Cmd> TmuxNavigateRight<CR>", opts)
-
 -- center search results
 map("n", "n", "nzz", opts)
 map("n", "N", "Nzz", opts)
@@ -104,9 +98,6 @@ map('n', '<Leader>.', "<Cmd>lua require 'telescope'.extensions.file_browser.file
 map('n', '<Leader>tt', '<Cmd>terminal<CR>A', opts)
 map('n', '<Leader>te', '<Cmd>!wezterm start --cwd "$PWD" --always-new-process & disown<CR><CR>', opts)
 
--- Neogit
-map('n', '<Leader>gg', '<Cmd>Neogit<CR>', opts)
-
 -- todo-comments
 map('n', '<Leader>td', '<Cmd>TodoTelescope<CR>', opts)
 
@@ -114,17 +105,6 @@ map('n', '<Leader>td', '<Cmd>TodoTelescope<CR>', opts)
 map('n', '<Leader>la', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 map('n', '<Leader>lf', '<Cmd>lua vim.lsp.buf.format({async = true})<CR>', opts)
 map('n', '<Leader>lr', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
-
--- dap
-map('n', '<leader>dc', "<Cmd>lua require('dap').continue()<CR>", opts)
-map('n', '<leader>dv', "<Cmd>lua require('dap').step_over()<CR>", opts)
-map('n', '<leader>di', "<Cmd>lua require('dap').step_into()<CR>", opts)
-map('n', '<leader>do', "<Cmd>lua require('dap').step_out()<CR>", opts)
-map('n', '<leader>db', "<Cmd>lua require('dap').toggle_breakpoint()<CR>", opts)
-map('n', '<leader>dB', "<Cmd>lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: ')<CR>", opts)
-map('n', '<leader>dr', "<Cmd>lua require('dap').repl.open()<CR>", opts)
-map('n', '<leader>dl', "<Cmd>lua require('dap').run_last()<CR>", opts)
--- map('n', '<leader>dpb', "<Cmd>lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", opts)
 
 local virtual_lines_enabled = false
 map('n', '<leader>lt', '', {
@@ -139,21 +119,6 @@ map('n', '<leader>lt', '', {
 
 -- treesitter context
 map('n', '<leader>ct', '<Cmd>TSContextToggle<CR>', opts)
-
--- session managment
-map('n', '<leader>ss', '<Cmd>Autosession search<CR>', opts)
-map('n', '<leader>sd', '<Cmd>DeleteSession<CR>', opts)
-map('n', '<leader>sr', '<Cmd>RestoreSession<CR>', opts)
-map('n', '<leader>sS', '<Cmd>SaveSession<CR>', opts)
-
--- jot
-map('n', '<leader>j', '<Cmd>Jot<CR>', opts)
-
--- neogen
-map('n', '<leader>lg', '<Cmd>Neogen<CR>', opts)
-
--- nvim navbuddy
-map('n', '<leader>ln', '<Cmd>Navbuddy<CR>', opts)
 
 -- rust
 
