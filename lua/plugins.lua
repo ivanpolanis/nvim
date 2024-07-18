@@ -40,6 +40,10 @@ local plugins = {
 		},
 		config = get_config("cmp"),
 	},
+	{
+		"ojroques/nvim-bufdel",
+		opts = { next = 'tabs', quit = true },
+	},
 	{ "nvim-telescope/telescope-ui-select.nvim" },
 	{ "nvim-telescope/telescope-file-browser.nvim" },
 	{ "nvim-telescope/telescope-fzf-native.nvim",  build = 'make' },
@@ -87,6 +91,7 @@ local plugins = {
 		"echasnovski/mini.nvim",
 		config = get_config("mini"),
 	},
+	{ "christoomey/vim-tmux-navigator", lazy = false },
 	{
 		"simrat39/rust-tools.nvim",
 		ft = "rust",

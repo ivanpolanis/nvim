@@ -3,12 +3,13 @@ require('which-key').setup({
                 marks = true,
                 registers = true,
         },
-        keys = { 
-                {'<leader>.',
-                function()
-                        require('which-key').show({global = false})
-                end,
-                desc = "Buffer Local keymaps",},
+        win = {
+                title = true,
+                title_pos = 'center',
+                zindex = 1000,
+        },
+        triggers = {
+                { '<leader>', mode = { 'n', 'v' } },
         }
 })
 
@@ -24,4 +25,4 @@ wk.add({
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
-} )
+})

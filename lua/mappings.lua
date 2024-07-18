@@ -7,11 +7,12 @@ map('n', '<Space>', '<Nop>', opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- dissabling arrows
-map("n", "<Up>", "<Nop>", opts)
-map("n", "<Down>", "<Nop>", opts)
-map("n", "<Left>", "<Nop>", opts)
-map("n", "<Right>", "<Nop>", opts)
+-- better window navigation
+map("n", "<C-h>", "<Cmd> TmuxNavigateLeft<CR>", opts)
+map("n", "<C-l>", "<Cmd> TmuxNavigateRight<CR>", opts)
+map("n", "<C-j>", "<Cmd> TmuxNavigateDown<CR>", opts)
+map("n", "<C-k>", "<Cmd> TmuxNavigateUp<CR>", opts)
+
 
 -- center search results
 map("n", "n", "nzz", opts)
