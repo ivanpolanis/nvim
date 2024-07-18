@@ -79,6 +79,11 @@ local plugins = {
 		config = get_config("nvim-tree"),
 	},
 	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		opts = {}
+	},
+	{
 		"echasnovski/mini.nvim",
 		config = get_config("mini"),
 	},
