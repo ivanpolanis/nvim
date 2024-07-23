@@ -44,5 +44,11 @@ wk.add({
         { '<leader>gd', '<cmd>lua require"telescope.builtin".lsp_definitions()<CR>',                     desc = 'Lsp definition' },
         { '<leader>gv', '<cmd>lua require"telescope.builtin".lsp_definitions({jump_type="vsplit"})<CR>', desc = 'Lsp definition (vsplit)' },
 
+        -- Term
+
+        { '<leader>t',  group = '[T]erm' },
+        { '<leader>tf', '<Cmd>ToggleTerm direction=float<CR>',                                           desc = '[F]loat' },
+        { '<leader>th', '<Cmd>ToggleTerm direction=horizontal size=10<CR>',                              desc = '[H]orizontal' },
+        { '<leader>tv', '<Cmd>ToggleTerm direction=vertical size=80<CR>',                                desc = '[V]ertical' },
 
 }, opts)

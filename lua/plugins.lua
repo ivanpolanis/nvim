@@ -73,7 +73,7 @@ local plugins = {
 	{
 		"folke/which-key.nvim",
 		cmd = "WhichKey",
-		event = "VimEnter",
+		event = "VeryLazy",
 		keys = { "<leader>" },
 		config = get_config("which-key")
 	},
@@ -100,6 +100,14 @@ local plugins = {
 		ft = "rust",
 		dependencies = "neovim/nvim-lspconfig",
 	},
+
+	-- Toggle Term
+
+	{
+		"akinsho/toggleterm.nvim",
+		config = get_config("toggleterm")
+	},
+
 	{
 		"rust-lang/rust.vim",
 		ft = "rust",
