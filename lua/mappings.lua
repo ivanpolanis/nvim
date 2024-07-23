@@ -13,7 +13,6 @@ map("n", "<C-l>", "<Cmd> TmuxNavigateRight<CR>", opts)
 map("n", "<C-j>", "<Cmd> TmuxNavigateDown<CR>", opts)
 map("n", "<C-k>", "<Cmd> TmuxNavigateUp<CR>", opts)
 
-
 -- center search results
 map("n", "n", "nzz", opts)
 map("n", "N", "Nzz", opts)
@@ -28,16 +27,6 @@ map("v", ">", ">gv", opts)
 
 -- paste over currently selected text without yanking it
 map("v", "p", "\"_dP", opts)
-
--- go to definitions
-
-map('n', '<LEADER>gd', '<cmd>lua require"telescope.builtin".lsp_definitions()<CR>', opts)
-map('n', '<LEADER>gv', '<cmd>lua require"telescope.builtin".lsp_definitions({jump_type="vsplit"})<CR>', opts)
-
--- buffers
-
-map("n", "<leader>nn", ":enew<CR>", opts)
-map("n", "<leader>x", "<Cmd>BufDel<CR>", opts)
 
 -- Tab switch buffer
 map("n", "<S-l>", "<Cmd>bnext<CR>", opts)
@@ -117,12 +106,3 @@ map('n', '<leader>lt', '', {
         })
     end,
 })
-
--- treesitter context
-map('n', '<leader>ct', '<Cmd>TSContextToggle<CR>', opts)
-
--- rust
-
-map('n', '<leader>rc', ':!cargo check<CR>', opts)
-map('n', '<leader>rr', ':!cargo run<CR>', opts)
-map('n', '<leader>rt', ':!cargo test<CR>', opts)

@@ -26,7 +26,10 @@ local plugins = {
 		"nvim-telescope/telescope.nvim",
 		dependencies = {
 			"nvim-lua/popup.nvim",
-			{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font }, },
+			{ "nvim-tree/nvim-web-devicons",               enabled = vim.g.have_nerd_font },
+			{ "nvim-telescope/telescope-ui-select.nvim" },
+			{ "nvim-telescope/telescope-file-browser.nvim" },
+			{ "nvim-telescope/telescope-fzf-native.nvim",  build = 'make' }, },
 		config = get_config("telescope"),
 	},
 	{
@@ -44,9 +47,7 @@ local plugins = {
 		"ojroques/nvim-bufdel",
 		opts = { next = 'tabs', quit = true },
 	},
-	{ "nvim-telescope/telescope-ui-select.nvim" },
-	{ "nvim-telescope/telescope-file-browser.nvim" },
-	{ "nvim-telescope/telescope-fzf-native.nvim",  build = 'make' },
+
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
@@ -71,7 +72,9 @@ local plugins = {
 	},
 	{
 		"folke/which-key.nvim",
-		event = 'VimEnter',
+		cmd = "WhichKey",
+		event = "VimEnter",
+		keys = { "<leader>" },
 		config = get_config("which-key")
 	},
 	{
