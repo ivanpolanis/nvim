@@ -148,10 +148,10 @@ lspconfig.tsserver.setup({
     handlers = handlers,
 })
 
-lspconfig.rust_analyzer.setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-    handlers = handlers,
-})
-
+-- lspconfig.rust_analyzer.setup({
+--     on_attach = on_attach,
+--     capabilities = capabilities,
+--     handlers = handlers,
+-- })
+--
 vim.o.signcolumn = "yes:1"

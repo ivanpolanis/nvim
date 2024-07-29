@@ -96,9 +96,10 @@ local plugins = {
 	},
 	{ "christoomey/vim-tmux-navigator", lazy = false },
 	{
-		"simrat39/rust-tools.nvim",
+		"mrcjkb/rustaceanvim",
 		ft = "rust",
-		dependencies = "neovim/nvim-lspconfig",
+		version = "^5",
+		lazy = false,
 	},
 
 	-- Toggle Term
