@@ -58,7 +58,7 @@ local plugins = {
 		config = get_config("conform"),
 	},
 	{
-		"wiliamboman/mason.nvim",
+		"williamboman/mason.nvim",
 		dependencies = { "williamboman/mason-lspconfig.nvim" },
 		config = get_config("mason"),
 	},
