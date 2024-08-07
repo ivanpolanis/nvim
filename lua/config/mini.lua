@@ -1,5 +1,5 @@
-local ai = require('mini.ai')
-local surround = require('mini.surround')
+local ai = require("mini.ai")
+local surround = require("mini.surround")
 
 -- Better Around/Inside textobjects
 --
@@ -7,7 +7,7 @@ local surround = require('mini.surround')
 --  - va)  - [V]isually select [A]round [)]paren
 --  - yinq - [Y]ank [I]nside [N]ext [']quote
 --  - ci'  - [C]hange [I]nside [']quote
-ai.setup { n_lines = 500 }
+ai.setup({ n_lines = 500 })
 
 -- Add/delete/replace surroundings (brackets, quotes, etc.)
 --

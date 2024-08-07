@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 local expr_options = { noremap = true, expr = true, silent = true }
 
 -- set leader key
-map('n', '<Space>', '<Nop>', opts)
+map("n", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -26,7 +26,7 @@ map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 
 -- paste over currently selected text without yanking it
-map("v", "p", "\"_dP", opts)
+map("v", "p", '"_dP', opts)
 
 -- Tab switch buffer
 map("n", "<S-l>", "<Cmd>bnext<CR>", opts)
@@ -55,11 +55,11 @@ vim.cmd([[map <C-f> <Nop>]])
 
 -- Smart dd
 local function smart_dd()
-    if vim.api.nvim_get_current_line():match("^%s*$") then
-        return '"_dd'
-    else
-        return "dd"
-    end
+	if vim.api.nvim_get_current_line():match("^%s*$") then
+		return '"_dd'
+	else
+		return "dd"
+	end
 end
 vim.keymap.set("n", "dd", smart_dd, expr_options)
 
@@ -70,39 +70,39 @@ noremap! <C-h> <C-w>
 ]])
 
 -- Save on leader w
-map('n', '<Leader>w', "<Cmd>w<CR>", opts)
+map("n", "<Leader>w", "<Cmd>w<CR>", opts)
 
 -- Quit on leader
-map('n', '<Leader>q', "<Cmd>q<CR>", opts)
+map("n", "<Leader>q", "<Cmd>q<CR>", opts)
 
 -- NvimTree
-map('n', '<Leader>e', '<Cmd>NvimTreeToggle<CR>', opts)
+map("n", "<Leader>e", "<Cmd>NvimTreeToggle<CR>", opts)
 
 -- Telescope
-map('n', '<Leader><Space>', '<Cmd>Telescope find_files<CR>', opts)
-map('n', '<Leader>b', '<Cmd>Telescope buffers<CR>', opts)
-map('n', '<Leader>g', '<Cmd>Telescope live_grep<CR>', opts)
-map('n', '<Leader>.', "<Cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>", opts)
+map("n", "<Leader><Space>", "<Cmd>Telescope find_files<CR>", opts)
+map("n", "<Leader>b", "<Cmd>Telescope buffers<CR>", opts)
+map("n", "<Leader>g", "<Cmd>Telescope live_grep<CR>", opts)
+map("n", "<Leader>.", "<Cmd>lua require 'telescope'.extensions.file_browser.file_browser()<CR>", opts)
 
 -- Terminal
-map('n', '<Leader>tt', '<Cmd>terminal<CR>A', opts)
-map('n', '<Leader>te', '<Cmd>!wezterm start --cwd "$PWD" --always-new-process & disown<CR><CR>', opts)
+map("n", "<Leader>tt", "<Cmd>terminal<CR>A", opts)
+map("n", "<Leader>te", '<Cmd>!wezterm start --cwd "$PWD" --always-new-process & disown<CR><CR>', opts)
 
 -- todo-comments
-map('n', '<Leader>td', '<Cmd>TodoTelescope<CR>', opts)
+map("n", "<Leader>td", "<Cmd>TodoTelescope<CR>", opts)
 
 -- lsp
-map('n', '<Leader>la', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
-map('n', '<Leader>lf', '<Cmd>lua vim.lsp.buf.format({async = true})<CR>', opts)
-map('n', '<Leader>lr', '<Cmd>lua vim.lsp.buf.rename()<CR>', opts)
+map("n", "<Leader>la", "<Cmd>lua vim.lsp.buf.code_action()<CR>", opts)
+map("n", "<Leader>lf", "<Cmd>lua vim.lsp.buf.format({async = true})<CR>", opts)
+map("n", "<Leader>lr", "<Cmd>lua vim.lsp.buf.rename()<CR>", opts)
 
 local virtual_lines_enabled = false
-map('n', '<leader>lt', '', {
-    callback = function()
-        virtual_lines_enabled = not virtual_lines_enabled
-        vim.diagnostic.config({
-            virtual_lines = virtual_lines_enabled,
-            virtual_text = not virtual_lines_enabled,
-        })
-    end,
+map("n", "<leader>lt", "", {
+	callback = function()
+		virtual_lines_enabled = not virtual_lines_enabled
+		vim.diagnostic.config({
+			virtual_lines = virtual_lines_enabled,
+			virtual_text = not virtual_lines_enabled,
+		})
+	end,
 })

@@ -46,8 +46,8 @@ ls.config.set_config({
 		[types.choiceNode] = {
 			active = {
 				virt_text = { { "choiceNode", "Comment" } },
-			}
-		}
+			},
+		},
 	},
 	ext_base_prio = 300,
 	ext_prio_increase = 1,
@@ -99,10 +99,7 @@ local function jdocsnip(args, _, old_state)
 			else
 				inode = i(insert)
 			end
-			vim.list_extend(
-				nodes,
-				{ t({ " * @param " .. arg .. " " }), inode, t({ "", "" }) }
-			)
+			vim.list_extend(nodes, { t({ " * @param " .. arg .. " " }), inode, t({ "", "" }) })
 			param_nodes["arg" .. arg] = inode
 
 			insert = insert + 1
@@ -117,10 +114,7 @@ local function jdocsnip(args, _, old_state)
 			inode = i(insert)
 		end
 
-		vim.list_extend(
-			nodes,
-			{ t({ " * ", " * @return " }), inode, t({ "", "" }) }
-		)
+		vim.list_extend(nodes, { t({ " * ", " * @return " }), inode, t({ "", "" }) })
 		param_nodes.ret = inode
 		insert = insert + 1
 	end
@@ -133,10 +127,7 @@ local function jdocsnip(args, _, old_state)
 		else
 			ins = i(insert)
 		end
-		vim.list_extend(
-			nodes,
-			{ t({ " * ", " * @throws " .. exc .. " " }), ins, t({ "", "" }) }
-		)
+		vim.list_extend(nodes, { t({ " * ", " * @throws " .. exc .. " " }), ins, t({ "", "" }) })
 		param_nodes.ex = ins
 		insert = insert + 1
 	end
@@ -189,11 +180,11 @@ ls.add_snippets("java", {
 
 function leave_snippet()
 	if
-			((vim.v.event.old_mode == 's' and vim.v.event.new_mode == 'n') or vim.v.event.old_mode == 'i')
-			and require('luasnip').session.current_nodes[vim.api.nvim_get_current_buf()]
-			and not require('luasnip').session.jump_active
+		((vim.v.event.old_mode == "s" and vim.v.event.new_mode == "n") or vim.v.event.old_mode == "i")
+		and require("luasnip").session.current_nodes[vim.api.nvim_get_current_buf()]
+		and not require("luasnip").session.jump_active
 	then
-		require('luasnip').unlink_current()
+		require("luasnip").unlink_current()
 	end
 end
 
