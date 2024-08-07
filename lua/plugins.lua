@@ -1,5 +1,7 @@
 local function get_config(name)
-	return function() require(string.format('config/%s', name)) end
+	return function()
+		require(string.format("config/%s", name))
+	end
 end
 
 -- bootstrap lazy.nvim
@@ -26,10 +28,11 @@ local plugins = {
 		"nvim-telescope/telescope.nvim",
 		dependencies = {
 			"nvim-lua/popup.nvim",
-			{ "nvim-tree/nvim-web-devicons",               enabled = vim.g.have_nerd_font },
+			{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
 			{ "nvim-telescope/telescope-ui-select.nvim" },
 			{ "nvim-telescope/telescope-file-browser.nvim" },
-			{ "nvim-telescope/telescope-fzf-native.nvim",  build = 'make' }, },
+			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+		},
 		config = get_config("telescope"),
 	},
 	{
@@ -45,7 +48,7 @@ local plugins = {
 	},
 	{
 		"ojroques/nvim-bufdel",
-		opts = { next = 'tabs', quit = true },
+		opts = { next = "tabs", quit = true },
 	},
 
 	{
@@ -75,7 +78,7 @@ local plugins = {
 		cmd = "WhichKey",
 		event = "VeryLazy",
 		keys = { "<leader>" },
-		config = get_config("which-key")
+		config = get_config("which-key"),
 	},
 	{
 		"L3MON4D3/LuaSnip",
@@ -88,7 +91,7 @@ local plugins = {
 	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
-		opts = {}
+		opts = {},
 	},
 	{
 		"echasnovski/mini.nvim",
@@ -106,7 +109,7 @@ local plugins = {
 
 	{
 		"akinsho/toggleterm.nvim",
-		config = get_config("toggleterm")
+		config = get_config("toggleterm"),
 	},
 
 	{
@@ -114,15 +117,27 @@ local plugins = {
 		ft = "rust",
 		init = function()
 			vim.g.rustfmt_autosave = 1
-		end
+		end,
 	},
 	{
-		'saecki/crates.nvim',
-		tag = 'v0.3.0',
-		requires = { 'nvim-lua/plenary.nvim' },
+		"saecki/crates.nvim",
+		tag = "v0.3.0",
+		requires = { "nvim-lua/plenary.nvim" },
 		config = function()
-			require('crates').setup()
+			require("crates").setup()
 		end,
+	},
+
+	{
+		"ray-x/go.nvim",
+		dependencies = {
+			"ray-x/guihua.lua",
+			"neovim/nvim-lspconfig",
+			"nvim-treesitter/nvim-treesitter",
+		},
+		opts = {},
+		ft = { "go", "gomod" },
+		build = ':lua require("go.install").update_all_sync()',
 	},
 
 	{
@@ -134,18 +149,18 @@ local plugins = {
 		config = get_config("lualine"),
 	},
 
-	{ "catppuccin/nvim" } -- Catppuccin themes
+	{ "catppuccin/nvim" }, -- Catppuccin themes
 }
 
 local opts = {
 	plugins = {
 		install = {
-			colorscheme = { "catppuccin-mocha" }
-		}
+			colorscheme = { "catppuccin-mocha" },
+		},
 	},
 	ui = {
-		border = "rounded"
-	}
+		border = "rounded",
+	},
 }
 
-require('lazy').setup(plugins, opts)
+require("lazy").setup(plugins, opts)
