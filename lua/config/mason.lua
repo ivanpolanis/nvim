@@ -21,6 +21,7 @@ require("mason-lspconfig").setup({
 		"lua_ls",
 		"tsserver",
 		"pyright",
+		"marksman"
 	},
 	automatic_installation = true,
 })
