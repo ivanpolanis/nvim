@@ -129,6 +129,13 @@ local plugins = {
 	},
 
 	{
+		"lervag/vimtex",
+		lazy = false,
+		ft = { "tex" },
+		config = get_config("vimtex"),
+	},
+
+	{
 		"ray-x/go.nvim",
 		dependencies = {
 			"ray-x/guihua.lua",
