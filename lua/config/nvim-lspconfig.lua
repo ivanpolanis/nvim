@@ -162,7 +162,13 @@ lspconfig.gopls.setup({
 	},
 })
 
-lspconfig.marksman.setup {}
+lspconfig.zls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	handlers = handlers,
+})
+
+lspconfig.marksman.setup({})
 
 -- lspconfig.rust_analyzer.setup({
 --     on_attach = on_attach,
