@@ -78,7 +78,7 @@ lspconfig.ltex.setup({
 			disabled = { "markdown", "org", "gitcommit" },
 			enabled = { "latex", "tex", "bib" },
 			language = "es-ES",
-			dictionary = { ["es-ES"] = { "Ivan", "Polais" } },
+			dictionary = { ["es-ES"] = { "Ivan", "Polanis" } },
 			disabledRules = {
 				["es-ES"] = {
 					"TOO_LONG_SENTENCE",
