@@ -85,6 +85,10 @@ local plugins = {
 		config = get_config("luasnip"),
 	},
 	{
+		"L3MON4D3/LuaSnip",
+		dependencies = { "rafamadriz/friendly-snippets" },
+	},
+	{
 		"kyazdani42/nvim-tree.lua",
 		config = get_config("nvim-tree"),
 	},

@@ -16,6 +16,7 @@ smap <silent><expr> <C-E> luasnip#choice_active() ? '<Plug>luasnip-next-choice' 
 -- Shorthands
 
 local ls = require("luasnip")
+require("luasnip.loaders.from_vscode").lazy_load()
 -- some shorthands...
 local s = ls.snippet
 local sn = ls.snippet_node
