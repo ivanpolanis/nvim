@@ -52,6 +52,9 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.incsearch = true
 
+-- Swapfile
+opt.swapfile = false
+
 -- Appearance
 -- opt.background = "dark"
 opt.cursorline = true
