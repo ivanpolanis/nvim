@@ -61,54 +61,6 @@ lspconfig.lua_ls.setup({
 	},
 })
 
--- lspconfig.ltex.setup({
--- 	on_attach = function(client, bufnr)
--- 		on_attach(client, bufnr)
--- 		require("ltex_extra").setup({
--- 			load_langs = { "en-CA", "en-US", "es-ES" },
--- 			init_check = true,
--- 			path = os.getenv("HOME") .. "/.config/nvim/dictionaries",
--- 			log_level = "none",
--- 		})
--- 	end,
--- 	capabilities = capabilities,
--- 	handlers = handlers,
--- 	settings = {
--- 		ltex = {
--- 			disabled = { "markdown", "org", "gitcommit" },
--- 			enabled = { "latex", "tex", "bib" },
--- 			language = "es-ES",
--- 			dictionary = { ["es-ES"] = { "Ivan", "Polais" } },
--- 			disabledRules = {
--- 				["es-ES"] = {
--- 					"TOO_LONG_SENTENCE",
--- 				},
--- 			},
--- 			additionalRules = {
--- 				enablePickyRules = true,
--- 				motherTongue = "es-ES",
--- 			},
--- 			latex = {
--- 				environments = {
--- 					verbatim = { "ignore" },
--- 					Verbatim = { "ignore" },
--- 					minted = { "ignore" },
--- 					texttt = { "ignore" },
--- 					forest = { "ignore" },
--- 				},
--- 			},
--- 			markdown = {
--- 				nodes = {
--- 					CodeBlock = { "ignore" },
--- 					FencedCodeBlock = { "ignore" },
--- 					AutoLink = { "dummy" },
--- 					Code = { "dummy" },
--- 				},
--- 			},
--- 		},
--- 	},
--- })
-
 lspconfig.bashls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
@@ -166,6 +118,37 @@ lspconfig.zls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	handlers = handlers,
+})
+
+lspconfig.tsserver.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
+})
+
+lspconfig.eslint.setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
+})
+
+lspconfig.tailwindcss.setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	filetypes = {
+		"typescript",
+		"typescriptreact",
+		"typescript.tsx",
+		"javascript",
+		"javascriptreact",
+		"javascript.jsx",
+		"templ",
+		"vue",
+		"html",
+		"astro",
+		"htmlangular",
+		"react",
+	},
 })
 
 lspconfig.marksman.setup({})

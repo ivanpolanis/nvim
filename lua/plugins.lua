@@ -20,10 +20,18 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+	--detect tabstop and shiftwidth automatically
 	{ "tpope/vim-sleuth" },
+	-- commenting with gc
 	{ "numToStr/Comment.nvim", opts = {} },
+	-- lua functions & utilities
 	{ "nvim-lua/plenary.nvim" },
 	{ "nvim-lua/popup.nvim" },
+
+	-- add, delete, change surroundings
+	{ "tpope/vim-surround" },
+
+	-- telescope
 	{
 		"nvim-telescope/telescope.nvim",
 		dependencies = {
@@ -35,6 +43,8 @@ local plugins = {
 		},
 		config = get_config("telescope"),
 	},
+
+	-- autocompletions
 	{
 		"hrsh7th/nvim-cmp",
 		dependencies = {
@@ -46,25 +56,35 @@ local plugins = {
 		},
 		config = get_config("cmp"),
 	},
+
 	{
 		"ojroques/nvim-bufdel",
 		opts = { next = "tabs", quit = true },
 	},
 
+	-- treesitter
 	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		config = get_config("nvim-treesitter"),
 	},
+
+	-- formatter
 	{
 		"stevearc/conform.nvim",
 		config = get_config("conform"),
 	},
+	{ "nvimtools/none-ls.nvim" }, -- configure formatters & linters
+	{ "jayp0521/mason-null-ls.nvim", config = get_config("null-ls") }, -- bridges gap b/w mason & null-ls
+
+	-- lsp server manager
 	{
 		"williamboman/mason.nvim",
 		dependencies = { "williamboman/mason-lspconfig.nvim" },
 		config = get_config("mason"),
 	},
+
+	-- lsp server configurator
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
@@ -73,47 +93,46 @@ local plugins = {
 		},
 		config = get_config("nvim-lspconfig"),
 	},
-	{
-		"folke/which-key.nvim",
-		cmd = "WhichKey",
-		event = "VeryLazy",
-		keys = { "<leader>" },
-		config = get_config("which-key"),
-	},
+	{ "jose-elias-alvarez/typescript.nvim" }, -- additional functionality for typescript server (e.g. rename file & update imports)
+
+	-- snippets
 	{
 		"L3MON4D3/LuaSnip",
 		config = get_config("luasnip"),
 	},
 	{
 		"L3MON4D3/LuaSnip",
-		dependencies = { "rafamadriz/friendly-snippets" },
+		dependencies = { "rafamadriz/friendly-snippets" }, -- useful snippets
 	},
+
+	-- nvim tree
 	{
 		"kyazdani42/nvim-tree.lua",
 		config = get_config("nvim-tree"),
 	},
+
+	-- autopairs
 	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
 		opts = {},
 	},
-	{
-		"echasnovski/mini.nvim",
-		config = get_config("mini"),
-	},
-	{ "christoomey/vim-tmux-navigator", lazy = false },
-	{
-		"mrcjkb/rustaceanvim",
-		ft = "rust",
-		version = "^5",
-		lazy = false,
-	},
+
+	{ "windwp/nvim-ts-autotag", after = "nvim-treesitter" },
 
 	-- Toggle Term
 
 	{
 		"akinsho/toggleterm.nvim",
 		config = get_config("toggleterm"),
+	},
+
+	-- rust utilities
+	{
+		"mrcjkb/rustaceanvim",
+		ft = "rust",
+		version = "^5",
+		lazy = false,
 	},
 
 	{
@@ -132,13 +151,7 @@ local plugins = {
 		end,
 	},
 
-	{
-		"lervag/vimtex",
-		lazy = false,
-		ft = { "tex" },
-		config = get_config("vimtex"),
-	},
-
+	-- go utilities
 	{
 		"ray-x/go.nvim",
 		dependencies = {
@@ -150,7 +163,18 @@ local plugins = {
 		ft = { "go", "gomod" },
 		build = ':lua require("go.install").update_all_sync()',
 	},
+	-- others
+	{ "christoomey/vim-tmux-navigator", lazy = false },
 
+	-- vimtex
+	{
+		"lervag/vimtex",
+		lazy = false,
+		ft = { "tex" },
+		config = get_config("vimtex"),
+	},
+
+	-- ui
 	{
 		"akinsho/bufferline.nvim",
 		config = get_config("bufferline"),
@@ -159,8 +183,16 @@ local plugins = {
 		"nvim-lualine/lualine.nvim",
 		config = get_config("lualine"),
 	},
+	{
+		"folke/which-key.nvim",
+		cmd = "WhichKey",
+		event = "VeryLazy",
+		keys = { "<leader>" },
+		config = get_config("which-key"),
+	},
 
-	{ "catppuccin/nvim" }, -- Catppuccin themes
+	-- themes
+	{ "catppuccin/nvim" },
 }
 
 local opts = {
