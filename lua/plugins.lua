@@ -166,6 +166,14 @@ local plugins = {
 	-- others
 	{ "christoomey/vim-tmux-navigator", lazy = false },
 
+	-- markdown preview
+	{
+		"toppair/peek.nvim",
+		event = { "VeryLazy" },
+		build = "deno task --quiet build:fast",
+		config = get_config("peek"),
+	},
+
 	-- vimtex
 	{
 		"lervag/vimtex",
