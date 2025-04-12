@@ -168,7 +168,7 @@ local plugins = {
 
 	-- markdown preview
 	{
-		"toppair/peek.nvim",
+		"toppair/peek.nvim", -- Requires deno and webkit2gtk for work
 		event = { "VeryLazy" },
 		build = "deno task --quiet build:fast",
 		config = get_config("peek"),
