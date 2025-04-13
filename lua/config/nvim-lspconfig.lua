@@ -91,12 +91,6 @@ lspconfig.pyright.setup({
 	handlers = handlers,
 })
 
-lspconfig.tsserver.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
-	handlers = handlers,
-})
-
 lspconfig.gopls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
@@ -120,7 +114,7 @@ lspconfig.zls.setup({
 	handlers = handlers,
 })
 
-lspconfig.tsserver.setup({
+lspconfig.ts_ls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },

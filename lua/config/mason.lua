@@ -12,7 +12,7 @@ require("mason").setup({
 
 require("mason-lspconfig").setup({
 	ensure_installed = {
-		"tsserver",
+		"ts_ls",
 		"eslint",
 		"bashls",
 		"clangd",
@@ -21,7 +21,6 @@ require("mason-lspconfig").setup({
 		"rust_analyzer",
 		"sqlls",
 		"lua_ls",
-		"tsserver",
 		"pyright",
 		"marksman",
 	},
