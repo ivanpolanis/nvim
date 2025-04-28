@@ -117,18 +117,21 @@ lspconfig.zls.setup({
 lspconfig.ts_ls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
+	handlers = handlers,
 	filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
 })
 
 lspconfig.eslint.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+	handlers = handlers,
 	filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
 })
 
 lspconfig.tailwindcss.setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+	handlers = handlers,
 	filetypes = {
 		"typescript",
 		"typescriptreact",
