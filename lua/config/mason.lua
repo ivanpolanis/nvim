@@ -23,6 +23,7 @@ require("mason-lspconfig").setup({
 		"lua_ls",
 		"pyright",
 		"marksman",
+		"tinymist",
 	},
 	automatic_installation = true,
 })
@@ -32,6 +33,7 @@ require("mason-null-ls").setup({
 	ensure_installed = {
 		-- "clang-format", -- c formatter
 		"prettier", -- ts/js formatter
+		"black", -- python formatter
 		-- "stylua", -- lua formatter
 		-- "eslint_d", -- ts/js linter
 	},
