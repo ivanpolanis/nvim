@@ -36,10 +36,10 @@ local plugins = {
 		"nvim-telescope/telescope.nvim",
 		dependencies = {
 			"nvim-lua/popup.nvim",
-			{ "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
+			{ "nvim-tree/nvim-web-devicons",               enabled = vim.g.have_nerd_font },
 			{ "nvim-telescope/telescope-ui-select.nvim" },
 			{ "nvim-telescope/telescope-file-browser.nvim" },
-			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+			{ "nvim-telescope/telescope-fzf-native.nvim",  build = "make" },
 		},
 		config = get_config("telescope"),
 	},
@@ -74,7 +74,7 @@ local plugins = {
 		"stevearc/conform.nvim",
 		config = get_config("conform"),
 	},
-	{ "nvimtools/none-ls.nvim" }, -- configure formatters & linters
+	{ "nvimtools/none-ls.nvim" },                                     -- configure formatters & linters
 	{ "jayp0521/mason-null-ls.nvim", config = get_config("null-ls") }, -- bridges gap b/w mason & null-ls
 
 	-- lsp server manager
@@ -93,7 +93,6 @@ local plugins = {
 		},
 		config = get_config("nvim-lspconfig"),
 	},
-	{ "jose-elias-alvarez/typescript.nvim" }, -- additional functionality for typescript server (e.g. rename file & update imports)
 
 	-- snippets
 	{
@@ -118,7 +117,7 @@ local plugins = {
 		opts = {},
 	},
 
-	{ "windwp/nvim-ts-autotag", after = "nvim-treesitter" },
+	{ "windwp/nvim-ts-autotag",         after = "nvim-treesitter" },
 
 	-- Toggle Term
 
@@ -127,60 +126,8 @@ local plugins = {
 		config = get_config("toggleterm"),
 	},
 
-	-- rust utilities
-	{
-		"mrcjkb/rustaceanvim",
-		ft = "rust",
-		version = "^5",
-		lazy = false,
-	},
-
-	{
-		"rust-lang/rust.vim",
-		ft = "rust",
-		init = function()
-			vim.g.rustfmt_autosave = 1
-		end,
-	},
-	{
-		"saecki/crates.nvim",
-		tag = "v0.3.0",
-		requires = { "nvim-lua/plenary.nvim" },
-		config = function()
-			require("crates").setup()
-		end,
-	},
-
-	-- go utilities
-	{
-		"ray-x/go.nvim",
-		dependencies = {
-			"ray-x/guihua.lua",
-			"neovim/nvim-lspconfig",
-			"nvim-treesitter/nvim-treesitter",
-		},
-		opts = {},
-		ft = { "go", "gomod" },
-		build = ':lua require("go.install").update_all_sync()',
-	},
 	-- others
 	{ "christoomey/vim-tmux-navigator", lazy = false },
-
-	-- markdown preview
-	{
-		"toppair/peek.nvim", -- Requires deno and webkit2gtk for work
-		event = { "VeryLazy" },
-		build = "deno task --quiet build:fast",
-		config = get_config("peek"),
-	},
-
-	-- vimtex
-	{
-		"lervag/vimtex",
-		lazy = false,
-		ft = { "tex" },
-		config = get_config("vimtex"),
-	},
 
 	-- ui
 	{
@@ -205,7 +152,7 @@ local plugins = {
 		"chomosuke/typst-preview.nvim",
 		lazy = false, -- or ft = 'typst'
 		version = "1.*",
-		opts = {}, -- lazy.nvim will implicitly calls `setup {}`
+		opts = {},  -- lazy.nvim will implicitly calls `setup {}`
 	},
 
 	-- themes

@@ -16,7 +16,6 @@ require("mason-lspconfig").setup({
 		"eslint",
 		"bashls",
 		"clangd",
-		"gopls",
 		"jsonls",
 		"rust_analyzer",
 		"sqlls",
@@ -31,11 +30,7 @@ require("mason-lspconfig").setup({
 require("mason-null-ls").setup({
 	-- list of formatters & linters for mason to install
 	ensure_installed = {
-		-- "clang-format", -- c formatter
 		"prettier", -- ts/js formatter
-		"black", -- python formatter
-		-- "stylua", -- lua formatter
-		-- "eslint_d", -- ts/js linter
 	},
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,
